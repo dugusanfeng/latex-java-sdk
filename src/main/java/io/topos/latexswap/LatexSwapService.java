@@ -141,7 +141,7 @@ public class LatexSwapService {
 
     public CompletableFuture<TransactionReceipt> swap(List<String> path, BigInteger amountIn, BigInteger amountInMax,
             BigInteger amountOut, BigInteger amountOutMin, BigInteger deadline, BigInteger value) {
-        return contract.swap(path, amountIn, amountInMax, amountOut, amountOutMin, deadline, value).sendAsync();
+        return contract.swap(path, amountIn, amountInMax, amountOut, amountOutMin).sendAsync();
     }
 
     public CompletableFuture<TransactionReceipt> rollback(String tokenIn, String tokenOut, BigInteger amountIn,
