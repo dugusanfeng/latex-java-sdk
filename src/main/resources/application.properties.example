@@ -1,0 +1,18 @@
+# LatexSwap SDK Configuration Example
+# Copy this file to application.properties and update with your values
+
+# Environment: DEVNET, UATNET, or MAINNET
+latex.env=DEVNET
+
+# RPC URL (optional, uses default if not set)
+# latex.rpc.url=https://devnet2openapi.platon.network/rpc
+
+# Contract Address (required)
+# latex.contract.address=0xYourContractAddressHere
+
+# Chain ID (optional, uses default if not set)
+# latex.chain.id=210309
+
+# Explorer URL (optional, uses default if not set)
+# latex.explorer.url=https://devnet2scan.platon.network
+
