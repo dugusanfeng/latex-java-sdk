@@ -87,7 +87,7 @@ public class LatexSwapService {
         return contract.getPlatformFeeRate().sendAsync();
     }
 
-    public CompletableFuture<BigInteger> getSwapRate(String token0, String token1) {
+    public CompletableFuture<Integer> getSwapRate(String token0, String token1) {
         return contract.getSwapRate(token0, token1).sendAsync();
     }
 
@@ -96,10 +96,10 @@ public class LatexSwapService {
     }
 
     public CompletableFuture<BigInteger> getMiddleSwapRate(String token0, String token1) {
-        return contract.getMiddleSwapRate(token0, token1).sendAsync();
+        return contract.getMiddleSwapRate(token0).sendAsync();
     }
 
-    public CompletableFuture<AmountResult> getAmountIn(List<String> path, BigInteger amountOut) {
+    public CompletableFuture<AmountResult> getAmountIn(List<string> path, BigInteger amountOut) {
         return contract.getAmountIn(path, amountOut).sendAsync()
                 .thenApply(result -> {
                     List<BigInteger> values = result.stream()
