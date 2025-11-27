@@ -167,7 +167,7 @@ public final class QueryCli {
         List<String> path = parsePath(requireParam(params, "--path"));
         BigInteger amountIn = new BigInteger(requireParam(params, "--amount"));
 
-        LatexSwapService.AmountResult result = service.getAmountOut(path).get();
+        LatexSwapService.AmountResult result = service.getAmount(path).get();
         System.out.printf("AmountOut path=%s amountIn=%s amountOut=%s fee=%s%n",
             path, amountIn, result.getAmount(), result.getFee());
     }
